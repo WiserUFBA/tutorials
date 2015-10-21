@@ -1,0 +1,40 @@
+### Tutorial - How to use esp 8266
+
+-- Vou escrever em portugues já que não sei se alguem vai usar ele externamente !!!
+
+Introducao:
+    O ESP8266 é um CI Micontrolador (MCU) com capacidades de rede embutidas e um preço
+bem competetivo, saindo em média pelo valor de $ 7,00 (ou na cotação atual em reais
+R$ 27,00). Além dos motivos listados acima o ESP8266, também tem como vantagem ter um
+firmware OpenSource (ou pelo menos que pode ser hackeado pelos usuarios), possui
+bastantes implementações tanto de biblioteca como de firmwares alternativos (alguns
+deixando os semelhantes ao arduino, outros possibilitando a passagem de comandos na
+linguagem LUA ou até mesmo Python), além de uma boa quantidade de placas vindo com ele
+integrado, o que faz do ESP8266 um divisor de aguas quanto a Internet das Coisas.
+    Projetado pela empresa ESPRESSIF (empresa essa que possui apenas o ESP8266 e algumas
+variantes do mesmo em seu catalogo) o ESP8266 faz parte de uma linha de MCU de baixo
+custo e rede integrado. Tem como disvantagem (se comparado ao arduino) a falta de pinos
+com suporte a PWM e a falta de ADC's (os famosos 'pinos analógicos') e DAC's, outra
+falta por parte dos modulos com o ESP8266 é o uso da comunicação SPI para a comunicação
+com a memória flash externa da qual ele faz uso, sobrando apenas a comunicação UART
+(padrão para os comandos AT) entre outras como I2C, porém que como devem saber tem a
+desvantagem de serem lentas e perder em capacidade de processamento para a SPI.
+
+Motivacao:
+    O fato do ESP8266 ter um preço bastante acessivel, e também servir como modulo Wifi
+tornam o mesmo, perfeito para soluções da Internet das Coisas, como também para soluções
+de comunicação com outros microcontroladores.
+
+Caracteristicas Técnicas:
+    Consume Peak: > 300mA (A entrada 3.3V presente no Arduino não é suficiente para alimenta-lo)
+    Logic Levels: 3.3V (O que o tornam incompativeis com as versões 5V do arduino)
+    Input Voltage: 3.3V
+
+Problemas...
+    Como podem ver apesar de ser um modulo super legal, é dificil encontrar shields para
+arduino ou outras soluções prontas para o mesmo, e como ele opera a 3.3V fica ainda mais
+dificil conecta-lo a um arduino sem as devidas precauções.
+... <continuar>
+
+Adaptação Shield Xbee:
+

@@ -1,0 +1,57 @@
+Tutorial Avahi
+
+Introduction:
+    Avahi is the name of the open source version of the Apple Bonjour package which
+implement the zeroconf, a set of tools created by Apple enginers to create zero
+configuration networks. Zeroconf is implemented in the major OS and in some embedded
+systems like Conki, and Windows 8 Embedded, but neither Avahi (for Linux and Unix) and
+Bonjour (for Windows and Apple) is standard on Linux or Windows, only Apple has Zeroconf
+as a standard package. This guide will help you to achieve Zeroconf in all Major OS, if
+you have a Apple Computer you already have Bonjour Zeroconf, so just search for Bonjour
+Browser in Finder and look for your raspberry, our images by default has Zeroconf
+enabled. Because the variety of OS's I'll only provide this guide to the following OS's:
+Debian/Ubuntu, Arch Linux, Fedora/Red Hat** (not complete) , Windows 7, Windows 10.
+
+>>> Windows7 and Windows 8,8.1 and Windows 10
+        For install Bonjour in this system is quite easy, if you already have iTunes installed
+    you can skip the following steps.
+
+    Steps:
+        1.  Download this tool http://support.apple.com/kb/DL999 .
+        2.  Install the downloaded tool, and start the discover utilitie, to check if it is
+            working.
+
+>>> Arch Linux
+        Arch Linux has a different package manager in comparise with Fedora/Red Hat, and
+    Debian/Ubuntu based distributions. If you have a distribuition based on Debian/Ubuntu like
+    Elementary or Linux Mint you can skyp these steps.
+
+    Steps:
+        1.  Like I've said on the introduction, Avahi is not a default component in some Linux
+            and of course Arch Linux it's not a exception (hahahaha), so you need to install these
+            programs to be able to use Avahi in Arch-Linux as root of course, (sudo if you have):
+            $ pacman -Sy avahi nss-mdns
+        2.  With the programs listed above, installed now we can start the configuration proccess
+            first change the line that contains "hosts: files dns myhostname" in /etc/nsswitch.conf
+            with the following content:
+            hosts: files mdns [NOTFOUND=return] dns myhostname
+        3.  Start the service for check if avahi-discover is working and then enable in startup
+            $ systemctl restart avahi-daemon
+            $ systemctl restart avahi-daemon
+        4.  That's all if you don't know how to test try to ping your own computer with
+            $ ping `hostname`.local
+            and then try to ping you raspberry with
+            $ ping raspberrypi.local
+            Ps.: If you have changed Raspberry Pi hostname you need to change the raspberrypi with
+                 the hostname you are using
+
+>>> Debian/Ubuntu
+
+
+>>> Fedora/Red Hat
+        Fedora by default has avahi enabled, you can check if the process is active using
+    'systemctl status avahi-daemon.service' (without the quotes), if avahi is not installed in your
+    system by any reason, you could install with 'yum install avahi' (without the quotes).
+        Don't forget to use avahi-discover to list devices with zeroconf in your network, to install
+    avavhi-discover, just type 'yum install avahi-discover' in your system.
+

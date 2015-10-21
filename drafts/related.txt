@@ -1,0 +1,5 @@
+# RELATED TOPICS
+http://blog.samat.org/2015/02/05/slimming-an-existing-raspbian-install/
+https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=57001
+http://wrightrocket.blogspot.com.br/2012/06/keeping-your-raspberry-pi-fresh.html
+http://www.richardsramblings.com/2013/02/minimalist-raspberry-pi-server-image/

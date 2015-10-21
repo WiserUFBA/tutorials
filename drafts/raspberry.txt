@@ -1,0 +1,22 @@
+Tutorial Raspberry Pi
+
+Introduction:
+    Raspberry Pi is a low cost embedded computer, with an ARM processor. The main
+objective of the Raspberry Pi is provide a really low cost computer (only $ 35)
+aimed to the development of multimedia, and teach activities. This tutorial will
+explain how to install and configure Raspberry Pi with one of our packages.
+
+Ps.: Our images are compatible with Raspberry Pi Models A, A+, B, B+ and 2 variants
+
+Steps:
+    1.  *** DOWNLOAD AND VERIFY ***
+    2.  *** COPY TO THE  SDCARD ***
+    3.  After you have manually installed the image on SD-CARD, it's time to turn on
+        your Raspberry (yuppppeeeee!) on, so put the SD-CARD in the Raspberry slot
+        and power the raspberry with the power supply (*see correct PSU for Rasp).
+    4.  With the Raspberry on, now we could start the process of setup. First you have
+        to choose one way of communicate with the Raspberry, and for that you have two
+        options: connect to the monitor with a HDMI cable and a keyboard, or use SSH
+        (Secure Shell) a linux tool for remote access.
+        *** SEE SECURE SHELL ***
+

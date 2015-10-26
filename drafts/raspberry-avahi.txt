@@ -48,10 +48,25 @@ Debian/Ubuntu, Arch Linux, Fedora/Red Hat** (not complete) , Windows 7, Windows 
 >>> Debian/Ubuntu
 
 
->>> Fedora/Red Hat
+>>> Fedora/Red Hat (Tested in:	Fedora release 22 (Twenty Two))
+
         Fedora by default has avahi enabled, you can check if the process is active using
     'systemctl status avahi-daemon.service' (without the quotes), if avahi is not installed in your
-    system by any reason, you could install with 'yum install avahi' (without the quotes).
-        Don't forget to use avahi-discover to list devices with zeroconf in your network, to install
-    avavhi-discover, just type 'yum install avahi-discover' in your system.
+    system by any reason, you could install with 'dnf install avahi' (without the quotes).
+       
+        Furthermore, for also using avahi-discover and other functions:
+            # dnf install avahi-ui-tools avahi-dnsconfd avahi-tools
+        
+        To complete, edit file (/etc/avahi/avahi-daemon.conf):
+            host-name=yourhost
+            publish-hinfo=yes
+            publish-workstation=yes
+        
+        Checking:
+            $ avahi-browse -a
+            or
+            $avahi-discover
+        
+        
+       
 
